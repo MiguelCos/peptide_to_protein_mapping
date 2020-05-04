@@ -1,1 +1,1 @@
-# peptide_to_protein_mapping
+# Peptide to protein mapping
