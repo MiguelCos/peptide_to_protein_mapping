@@ -1,0 +1,1 @@
+Both proteinGroups.txt and peptides.txt files from your MaxQuant output are required to run this script. 
