@@ -18,7 +18,7 @@ plot_coverage <- function(data,
                         # draw canvas
                         ylim(0.5, 
                              max(indexed$index)+0.07)+
-                        xlim(-max(indexed$protein_length)*0.4,
+                        xlim(-max(indexed$protein_length)*0.6,
                              max(indexed$protein_length) + max(indexed$protein_length*0.05))+
                         labs(x = "Amino acid number",
                              y = "") +
