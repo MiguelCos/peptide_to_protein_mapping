@@ -4,7 +4,7 @@ Script for the visualization of the peptide coverage (peptide-to-protein mapping
 
 ## How to use?
 
-1. Download this repo in your local PC.
+1. Download this repo to your local PC.
 2. Unzip the files and initialize the downloaded folder as an R Studio Project.
 3. Add both the `peptides.txt` and the `proteinGroups.txt` files from your MaxQuant output to the `Data` folder.
 4. Open the project in R Studio.
