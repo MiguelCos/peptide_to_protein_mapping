@@ -4,7 +4,8 @@
 ## WHICH PROTEIN DO YOU WANT TO PLOT? ----
 # please type the UNIPROT ID for the desired protein
 
-proteinid <- "Q5JWB9"
+proteinid <- "A0A024QZX5"
+# Q5JWB9
 
 ## EXECUTE CODE ----
 
@@ -33,7 +34,10 @@ source(here::here("R/plot_coverage.R"))
 plot_coverage(covdata,
               id = proteinid)
 
+
 covplot <- plot_coverage(covdata,id = proteinid)
+
+print(covplot)
 
 # Generate image file ----
 
