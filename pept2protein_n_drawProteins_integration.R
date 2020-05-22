@@ -29,7 +29,7 @@ if(!exists("pepts")){
                                 stringsAsFactors = FALSE)} 
 
 if(!exists("proteins")){
-            proteins <- read.delim(file = "DATA/proteinGroups.txt",
+            proteins <- read.delim(file = "Data/proteinGroups.txt",
                                    sep = "\t",
                                    stringsAsFactors = FALSE)}
 
