@@ -6,7 +6,9 @@
 
 library(tidyverse)
 library(drawProteins)
-
+library(plotly)
+library(htmlwidgets)
+            
 ## WHICH PROTEIN DO YOU WANT TO PLOT? ----
 # please type the UNIPROT ID for the desired protein
 
@@ -16,13 +18,18 @@ proteinid <- "P37802"
 ## EXECUTE CODE ----
 
 # Load required data ----
+
+# set the working directory dynamically just to be sure ----
+
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 if(!exists("pepts")){
             pepts <- read.delim(file = "Data/peptides.txt",
                                 sep = "\t",
                                 stringsAsFactors = FALSE)} 
 
 if(!exists("proteins")){
-            proteins <- read.delim(file = "Data/proteinGroups.txt",
+            proteins <- read.delim(file = "DATA/proteinGroups.txt",
                                    sep = "\t",
                                    stringsAsFactors = FALSE)}
 
@@ -78,3 +85,12 @@ source(here::here("R/draw_peptides.R"))
 
 w_pepts <- draw_peptides(hel, wpept_features)
 
+# interactive output:
+
+interactive_w_pepts <- ggplotly(w_pepts)
+
+if(!exists("Plots/")){
+            dir.create("Plots/")
+            } 
+
+withr::with_dir('Plots', saveWidget(interactive_w_pepts, file="Interacive_peptides.html"))
