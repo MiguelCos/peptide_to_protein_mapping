@@ -25,7 +25,8 @@ proteins <- read.delim(file = "Data/proteinGroups.txt",
 source(here::here("R/getcovaragedata.R"))
 
 covdata <- getcoveragedata(proteinGroups = proteins,
-                           peptides = pepts)
+                           peptides = pepts,
+                           id = proteinid)
 
 # Generate peptide-to-protein coverage plot ----
 
@@ -45,4 +46,6 @@ if(!dir.exists("Plot_outputs"))dir.create("Plot_outputs")
 
 ggsave(filename = paste0("Plot_outputs/coverage_plot_",proteinid,".tiff"),plot = covplot,
        device = 'tiff')
+
+sum
 
